@@ -1,6 +1,6 @@
 /* global: global, thing */
 'use strict';
-
+var _ = require('lodash');
 var fnBody;
 
 
@@ -29,9 +29,9 @@ global.properties = function() {
             dict[key] = value;
         },
         mapSet: function(props){
-            props.forEach(function(prop) {
-                this.set(prop.key, prop.value);
-            }, facade);
+            _.each(props, function(value, key) {
+                this.set(key, value);
+            }.bind(facade));
         },
         clear: function() {
             dict = {};

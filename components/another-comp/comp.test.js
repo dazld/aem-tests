@@ -16,4 +16,18 @@ describe('when invoking another component', function () {
             baz: 'foo'
         });
     });
+
+    it('should return extended properties if they are available', function () {
+        properties.mapSet({
+            a: 'b',
+            c: 'd'
+        });
+        var result = runTest();
+        assert.deepEqual(result, {
+            a: 'b',
+            c: 'd',
+            baz: 'foo'
+        });
+
+    });
 });
