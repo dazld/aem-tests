@@ -1,10 +1,12 @@
+/* global properties, use, granite*/
 
+use(function() {
 
-use(function(){
+    var myLabel = properties.get('foo');
+
     return {
-      foo: 'bar'
-    }
-
-
+        foo: myLabel,
+        hasLabel: !!myLabel
+    };
 });
 

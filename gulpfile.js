@@ -12,16 +12,17 @@ function runTests(){
     return gulp.src('**/*.test.js')
             .pipe(debug())
             .pipe(mocha({
-                require: [path.resolve(__dirname, './test/support/node')]
+                require: [path.resolve(__dirname, './test/support/node')],
+                reporter: 'nyan'
             }));
 }
 
 
 gulp.task('watch', function(){
     var watchtests = watch('**/*.test.js', function(){
-        return runTests(); 
+        return runTests();
     });
 });
 
-gulp.task('test', runTests); 
+gulp.task('test', runTests);
 
