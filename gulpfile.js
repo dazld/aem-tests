@@ -13,7 +13,7 @@ function runTests(){
             .pipe(debug())
             .pipe(mocha({
                 require: [path.resolve(__dirname, './test/support/node')],
-                reporter: 'nyan'
+                reporter: 'spec'
             }));
 }
 

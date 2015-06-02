@@ -1,11 +1,15 @@
 /* global properties, describe, it, runTest, beforeEach */
 
-require('./test-thing.js');
+
 var assert = require('assert');
+var path = require('path');
+var modelPath = path.resolve(__dirname, './test-thing');
 
 describe('when invoking component model',function() {
 
-    beforeEach(function(){
+    beforeEach(function() {
+        delete require.cache[modelPath];
+        require(modelPath);
         properties.clear();
     });
 
@@ -19,6 +23,7 @@ describe('when invoking component model',function() {
         });
     });
     it('returns expected info', function() {
+
 
         properties.set('foo', undefined); // not really necessary
 
