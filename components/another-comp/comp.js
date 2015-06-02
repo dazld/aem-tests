@@ -1,4 +1,4 @@
-/* global use */
+/* global use, properties */
 use(function() {
 
     var data = {
