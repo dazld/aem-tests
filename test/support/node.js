@@ -3,7 +3,6 @@
 var fnBody;
 
 global.use = function(){
-    console.log('use called');
     var args = [].slice.call(arguments);
     var deps = [];
     var hasDeps = args[0] instanceof Array;

@@ -1,4 +1,5 @@
-# ideas for how to unit test AEM server side js
+# PoC for AEM JS unit tests 
+
 
 - `npm install`
 - `gulp`
